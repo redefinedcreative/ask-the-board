@@ -6,10 +6,19 @@ The skill is the framework. **Your board is separate**, so you can run different
 
 ## Install
 
+Clone straight into Claude's skills folder. No symlinks are needed, which also works on locked-down work machines.
+
+**macOS / Linux**
 ```bash
-git clone https://github.com/redefinedcreative/ask-the-board.git ~/Developer/agency/ask-the-board
-ln -s ~/Developer/agency/ask-the-board ~/.claude/skills/ask-the-board
+git clone https://github.com/redefinedcreative/ask-the-board.git ~/.claude/skills/ask-the-board
 ```
+
+**Windows (PowerShell)**
+```powershell
+git clone https://github.com/redefinedcreative/ask-the-board.git "$env:USERPROFILE\.claude\skills\ask-the-board"
+```
+
+To update later, run `git pull` inside that folder.
 
 Then say **"build my board"** in Claude Code. It interviews you and creates `~/.claude/boards/<name>/`. Or copy `templates/` by hand:
 
